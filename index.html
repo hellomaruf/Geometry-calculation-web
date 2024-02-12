@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Geometry Calculation app</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.6.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="flex">
+      <div class="flex-1 grid grid-cols-3 gap-6 m-5">
+        <!-- Triangle -->
+        <div class="card bg-base-100 shadow-md">
+          <figure class="px-10 pt-10">
+            <img src="images/triangle.png" alt="Shoes" class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title">Triangle!</h2>
+            <p>Area (A) = 0.5 x b x h</p>
+            <div class="flex gap-4">
+              <input
+                type="text"
+                class="w-20 bg-slate-200 py-1 px-2 rounded-md outline-none"
+                placeholder="b"
+                id="input-base"
+              />
+              <span>cm</span>
+              <input
+                type="text"
+                class="w-20 bg-slate-200 py-1 px-2 rounded-md outline-none"
+                placeholder="h"
+                id="input-height"
+              />
+              <span>cm</span>
+            </div>
+            <h1>Area : <span id="triangle-span"></span> cm<sup>2</sup></h1>
+            <div class="card-actions w-full">
+              <button
+                onclick="calculationTriangleArea()"
+                class="bg-[#1090D8] hover:bg-[#2c7cab] duration-300 text-white py-2 rounded-lg w-full"
+              >
+                Calculation
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Rectangle -->
+        <div class="card bg-base-100 shadow-md">
+          <figure class="px-10 pt-10">
+            <img src="images/rectangle.png" alt="Shoes" class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title">Rectangle!</h2>
+            <p>Area (A) = w x I</p>
+            <div class="flex gap-4">
+              <input
+                type="text"
+                class="w-20 bg-slate-200 py-1 px-2 rounded-md outline-none"
+                id="input-width"
+                placeholder="w"
+              />
+              <span>cm</span>
+              <input
+                type="text"
+                class="w-20 bg-slate-200 py-1 px-2 rounded-md outline-none"
+                id="input-length"
+                placeholder="l"
+              />
+              <span>cm</span>
+            </div>
+            <h1>Area : <span id="rectangle-span"></span> cm<sup>2</sup></h1>
+
+            <div class="card-actions w-full">
+              <button
+                id="rectangle-btn"
+                class="bg-[#1090D8] hover:bg-[#2c7cab] duration-300 text-white py-2 rounded-lg w-full"
+              >
+                Calculation
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="card bg-base-100 shadow-md">
+          <figure class="px-10 pt-10">
+            <img
+              src="images/parallelogram.png"
+              alt="Shoes"
+              class="rounded-xl"
+            />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title">Parallelogram!</h2>
+            <p>Area (A) = 0.5 x b x h</p>
+            <div class="flex gap-4">
+              <input
+                type="text"
+                class="w-20 bg-slate-200 py-1 px-2 rounded-md outline-none"
+                placeholder="b"
+              />
+              <span>cm</span>
+              <input
+                type="text"
+                class="w-20 bg-slate-200 py-1 px-2 rounded-md outline-none"
+                placeholder="h"
+              />
+              <span>cm</span>
+            </div>
+            <div class="card-actions w-full">
+              <button
+                class="bg-[#1090D8] hover:bg-[#2c7cab] duration-300 text-white py-2 rounded-lg w-full"
+              >
+                Calculation
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="card bg-base-100 shadow-md">
+          <figure class="px-10 pt-10">
+            <img src="images/rhombus.png" alt="Shoes" class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title">Rhombus!</h2>
+            <p>Area (A) = 0.5 x b x h</p>
+            <div class="flex gap-4">
+              <input
+                type="text"
+                class="w-20 bg-slate-200 py-1 px-2 rounded-md outline-none"
+                placeholder="b"
+              />
+              <span>cm</span>
+              <input
+                type="text"
+                class="w-20 bg-slate-200 py-1 px-2 rounded-md outline-none"
+                placeholder="h"
+              />
+              <span>cm</span>
+            </div>
+            <div class="card-actions w-full">
+              <button
+                class="bg-[#1090D8] hover:bg-[#2c7cab] duration-300 text-white py-2 rounded-lg w-full"
+              >
+                Calculation
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="card bg-base-100 shadow-md">
+          <figure class="px-10 pt-10">
+            <img src="images/pentagon.png" alt="Shoes" class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title">Pentagon!</h2>
+            <p>Area (A) = 0.5 x b x h</p>
+            <div class="flex gap-4">
+              <input
+                type="text"
+                class="w-20 bg-slate-200 py-1 px-2 rounded-md outline-none"
+                placeholder="b"
+              />
+              <span>cm</span>
+              <input
+                type="text"
+                class="w-20 bg-slate-200 py-1 px-2 rounded-md outline-none"
+                placeholder="h"
+              />
+              <span>cm</span>
+            </div>
+            <div class="card-actions w-full">
+              <button
+                class="bg-[#1090D8] hover:bg-[#2c7cab] duration-300 text-white py-2 rounded-lg w-full"
+              >
+                Calculation
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="card bg-base-100 shadow-md">
+          <figure class="px-10 pt-10">
+            <img src="images/triangle.png" alt="Shoes" class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title">Triangle!</h2>
+            <p>Area (A) = 0.5 x b x h</p>
+            <div class="flex gap-4">
+              <input
+                type="text"
+                class="w-20 bg-slate-200 py-1 px-2 rounded-md outline-none"
+                placeholder="b"
+              />
+              <span>cm</span>
+              <input
+                type="text"
+                class="w-20 bg-slate-200 py-1 px-2 rounded-md outline-none"
+                placeholder="h"
+              />
+              <span>cm</span>
+            </div>
+            <div class="card-actions w-full">
+              <button
+                class="bg-[#1090D8] hover:bg-[#2c7cab] duration-300 text-white py-2 rounded-lg w-full"
+              >
+                Calculation
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center px-16 m-5 rounded-lg border-2">
+        <h1 class="text-center font-medium text-gray-600 pt-3 text-xl">
+          Geometry Calculation
+        </h1>
+      </div>
+    </div>
+    <script src="triangle-calculation.js"></script>
+    <script src="rectangle-calculation.js"></script>
+  </body>
+</html>
