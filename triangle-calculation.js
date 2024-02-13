@@ -9,3 +9,5 @@ function calculationTriangleArea() {
   let triangleSpan = document.getElementById("triangle-span");
   triangleSpan.innerText = triangleCalculation;
 }
+
+

@@ -129,23 +129,28 @@
           </figure>
           <div class="card-body items-center text-center">
             <h2 class="card-title">Rhombus!</h2>
-            <p>Area (A) = 0.5 x b x h</p>
+            <p>Area (A) = 0.5 x d<sup>1</sup> x d<sup>2</sup></p>
             <div class="flex gap-4">
               <input
                 type="text"
                 class="w-20 bg-slate-200 py-1 px-2 rounded-md outline-none"
-                placeholder="b"
+                id="input-perimeter"
+                placeholder="p"
               />
               <span>cm</span>
               <input
                 type="text"
                 class="w-20 bg-slate-200 py-1 px-2 rounded-md outline-none"
-                placeholder="h"
+                id="input-Diagonal"
+                placeholder="d"
               />
               <span>cm</span>
             </div>
+            <div class="">
+              <p>Area : <span id="rhombus-span">0</span> cm</p>
+            </div>
             <div class="card-actions w-full">
-              <button
+              <button id="rhombus-btn"
                 class="bg-[#1090D8] hover:bg-[#2c7cab] duration-300 text-white py-2 rounded-lg w-full"
               >
                 Calculation
@@ -223,5 +228,6 @@
     <script src="triangle-calculation.js"></script>
     <script src="rectangle-calculation.js"></script>
     <script src="Parallelogram.js"></script>
+    <script src="rhombus.js"></script>
   </body>
 </html>
