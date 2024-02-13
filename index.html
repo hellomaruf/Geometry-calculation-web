@@ -38,7 +38,7 @@
               />
               <span>cm</span>
             </div>
-            <h1>Area : <span id="triangle-span"></span> cm<sup>2</sup></h1>
+            <h1>Area : <span id="triangle-span">0</span> cm<sup>2</sup></h1>
             <div class="card-actions w-full">
               <button
                 onclick="calculationTriangleArea()"
@@ -73,7 +73,7 @@
               />
               <span>cm</span>
             </div>
-            <h1>Area : <span id="rectangle-span"></span> cm<sup>2</sup></h1>
+            <h1>Area : <span id="rectangle-span">0</span> cm<sup>2</sup></h1>
 
             <div class="card-actions w-full">
               <button
@@ -95,23 +95,27 @@
           </figure>
           <div class="card-body items-center text-center">
             <h2 class="card-title">Parallelogram!</h2>
-            <p>Area (A) = 0.5 x b x h</p>
+            <p>Area (A) = b x h</p>
+            <p>b=10cm, h=12cm</p>
             <div class="flex gap-4">
               <input
                 type="text"
                 class="w-20 bg-slate-200 py-1 px-2 rounded-md outline-none"
+                id="parallelogram-input-base"
                 placeholder="b"
               />
               <span>cm</span>
               <input
                 type="text"
                 class="w-20 bg-slate-200 py-1 px-2 rounded-md outline-none"
+                id="parallelogram-input-height"
                 placeholder="h"
               />
               <span>cm</span>
             </div>
+            <p>Area: <span id="parallelogram-span">0</span> cm<sup>2</sup></p>
             <div class="card-actions w-full">
-              <button
+              <button id="parallelogram-calculation-btn"
                 class="bg-[#1090D8] hover:bg-[#2c7cab] duration-300 text-white py-2 rounded-lg w-full"
               >
                 Calculation
@@ -218,5 +222,6 @@
     </div>
     <script src="triangle-calculation.js"></script>
     <script src="rectangle-calculation.js"></script>
+    <script src="Parallelogram.js"></script>
   </body>
 </html>
