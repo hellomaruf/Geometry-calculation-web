@@ -115,7 +115,8 @@
             </div>
             <p>Area: <span id="parallelogram-span">0</span> cm<sup>2</sup></p>
             <div class="card-actions w-full">
-              <button id="parallelogram-calculation-btn"
+              <button
+                id="parallelogram-calculation-btn"
                 class="bg-[#1090D8] hover:bg-[#2c7cab] duration-300 text-white py-2 rounded-lg w-full"
               >
                 Calculation
@@ -150,7 +151,8 @@
               <p>Area : <span id="rhombus-span">0</span> cm</p>
             </div>
             <div class="card-actions w-full">
-              <button id="rhombus-btn"
+              <button
+                id="rhombus-btn"
                 class="bg-[#1090D8] hover:bg-[#2c7cab] duration-300 text-white py-2 rounded-lg w-full"
               >
                 Calculation
@@ -162,25 +164,29 @@
           <figure class="px-10 pt-10">
             <img src="images/pentagon.png" alt="Shoes" class="rounded-xl" />
           </figure>
-          <div class="card-body items-center text-center">
+          <div id="card-div" class="card-body items-center text-center">
             <h2 class="card-title">Pentagon!</h2>
-            <p>Area (A) = 0.5 x b x h</p>
+            <p>Area (A) = 0.5 x p x b</p>
             <div class="flex gap-4">
               <input
                 type="text"
                 class="w-20 bg-slate-200 py-1 px-2 rounded-md outline-none"
-                placeholder="b"
+                id="perimeter"
+                placeholder="p"
               />
               <span>cm</span>
               <input
                 type="text"
                 class="w-20 bg-slate-200 py-1 px-2 rounded-md outline-none"
-                placeholder="h"
+                id="base"
+                placeholder="b"
               />
               <span>cm</span>
             </div>
+            <p>Area : <span id="pentagon-span">0</span> cm</p>
             <div class="card-actions w-full">
               <button
+                id="pentagon-btn"
                 class="bg-[#1090D8] hover:bg-[#2c7cab] duration-300 text-white py-2 rounded-lg w-full"
               >
                 Calculation
@@ -219,15 +225,27 @@
           </div>
         </div>
       </div>
-      <div class="text-center px-16 m-5 rounded-lg border-2">
-        <h1 class="text-center font-medium text-gray-600 pt-3 text-xl">
+      <div class="rounded-lg border-2">
+        <h1
+          class="px-16 m-5 text-center font-medium text-gray-600 pt-3 text-xl"
+        >
           Geometry Calculation
         </h1>
+        <div class="px-5 flex justify-around gap-10" id="final-result">
+          
+          <p class="font-bold text-md">
+            Name <span class="font-normal" id="name"></span>
+          </p>
+          <p class="font-bold text-md">
+            Result <span class="font-normal" id="result"></span>
+          </p>
+        </div>
       </div>
     </div>
     <script src="triangle-calculation.js"></script>
     <script src="rectangle-calculation.js"></script>
     <script src="Parallelogram.js"></script>
     <script src="rhombus.js"></script>
+    <script src="pentagon.js"></script>
   </body>
 </html>
