@@ -1,4 +1,4 @@
-let titleNum = 1;
+
 document.getElementById("pentagon-btn").addEventListener("click", function () {
   // Get perimeter value****
   // Bangla Way***********
@@ -27,11 +27,11 @@ document.getElementById("pentagon-btn").addEventListener("click", function () {
 
   // show card name************
   let name = document.getElementById("name");
-  let cardDiv = document.getElementById("card-div");
-  let cardTitle = cardDiv.childNodes[1].innerText;
+  let cardName = getName("card-pentagon");
+  console.log(cardName);
   let p2 = document.createElement("p");
-  p2.innerText = titleNum + ". " + cardTitle;
-  titleNum++;
+  p2.innerText = name.childElementCount + 1 + ". " + cardName;
+  console.log(name.childElementCount);
   result.appendChild(p1);
   name.appendChild(p2);
 });
